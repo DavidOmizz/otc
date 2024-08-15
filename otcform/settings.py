@@ -74,10 +74,10 @@ WSGI_APPLICATION = 'otcform.wsgi.application'
 
 
 import os
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 
 # Load environment variables from .env file
-load_dotenv()
+# load_dotenv()
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
