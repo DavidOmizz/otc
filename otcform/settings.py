@@ -76,10 +76,10 @@ WSGI_APPLICATION = 'otcform.wsgi.application'
 
 
 import os
-# from dotenv import load_dotenv
+from dotenv import load_dotenv
 
 # Load environment variables from .env file
-# load_dotenv()
+load_dotenv()
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
@@ -94,11 +94,11 @@ import os
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'opjhomes_otcformdb',
-        'USER': 'opjhomes_otc',
-        'PASSWORD': 'otc@admindb',
-        'HOST': '131.153.147.34',
-        'PORT': 3306,
+        'NAME': os.getenv('DB_NAME'),
+        'USER': os.getenv('DB_USER'),
+        'PASSWORD': os.getenv('DB_PASSWORD'),
+        'HOST': os.getenv('DB_HOST'),
+        'PORT': os.getenv('DB_PORT'),
     }
 }
 

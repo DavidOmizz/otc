@@ -6,4 +6,4 @@ from .models import CohortInfo
 
 @admin.register(CohortInfo)
 class CohortInfoAdmin(admin.ModelAdmin):
-    list_display = ('name','location', 'niche','student')
+    list_display = ('name','campus', 'niche','student')
